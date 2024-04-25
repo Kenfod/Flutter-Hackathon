@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:todolist/screens/tasks_screen.dart';
+import 'package:flutter/services.dart';
+import './screens/home.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 136, 48, 7),
-        ),
-        useMaterial3: true,
-      ),
-      home: TasksScreen(),
+      title: 'ToDo App',
+      home: Home(),
     );
   }
 }
