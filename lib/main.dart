@@ -12,25 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'ToDo App',
       home: Home(),
-=======
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,  // hide debug banner
-      title: 'Flutter Demo',  //set app title
-      theme: ThemeData(    //configure app theme
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 37, 112, 182),
-        ),
-        useMaterial3: true,
-      ),
-      home: TasksScreen(),
->>>>>>> 1e3af219de8b12aac04ba62df99db50f1a00c55b
     );
   }
 }

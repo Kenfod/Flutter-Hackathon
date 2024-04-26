@@ -5,7 +5,9 @@ import '../constants/colors.dart';
 
 class ToDoItem extends StatelessWidget {
   final ToDo todo;
+  // ignore: prefer_typing_uninitialized_variables
   final onToDoChanged;
+  // ignore: prefer_typing_uninitialized_variables
   final onDeleteItem;
 
   const ToDoItem({
@@ -18,7 +20,7 @@ class ToDoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
         onTap: () {
           // print('Clicked on Todo Item.');
@@ -27,7 +29,7 @@ class ToDoItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         tileColor: Colors.white,
         leading: Icon(
           todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,
@@ -42,8 +44,8 @@ class ToDoItem extends StatelessWidget {
           ),
         ),
         trailing: Container(
-          padding: EdgeInsets.all(0),
-          margin: EdgeInsets.symmetric(vertical: 12),
+          padding: const EdgeInsets.all(0),
+          margin: const EdgeInsets.symmetric(vertical: 12),
           height: 35,
           width: 35,
           decoration: BoxDecoration(
@@ -53,7 +55,7 @@ class ToDoItem extends StatelessWidget {
           child: IconButton(
             color: Colors.white,
             iconSize: 18,
-            icon: Icon(Icons.delete),
+            icon: const Icon(Icons.delete),
             onPressed: () {
               // print('Clicked on delete icon');
               onDeleteItem(todo.id);
